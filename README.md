@@ -167,8 +167,6 @@ The model achieves near-perfect performance, with accuracy, precision, recall, a
 | `shuttle.trn.Z`                             | Compressed version of the training dataset                                                       |
 | `shuttle_train_balanceado_manual.csv`       | Manually balanced dataset (classes 1, 4, 5)                                                      |
 | `shuttle_train_preprocesado_balanceado.csv` | Final preprocessed + balanced dataset                                                            |
-| `Index`                                     | Dataset metadata and technical description                                                       |
-| `shuttle.doc`                               | Official dataset documentation                                                                   |
 | `README.md`                                 | Project documentation                                                                            |
 
 ---
