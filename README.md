@@ -6,3 +6,21 @@ Classification project using the Statlog (Shuttle) dataset.  Includes preprocess
 **Year:** 2025
 
 **Course:** Neural Networks and Deep Learning
+
+---
+
+# Project Overview
+This project addresses the classification of the Shuttle Control System into 7 different classes, using a neural network model.
+The workflow includes:
+
+Data exploration and preprocessing
+
+Balancing strategies for highly imbalanced classes
+
+Feature selection
+
+MLP model training
+
+Cross-validation
+
+Performance evaluation and interpretation
