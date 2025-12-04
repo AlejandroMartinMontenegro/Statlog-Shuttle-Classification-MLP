@@ -52,7 +52,7 @@ The dataset is available from the UCI Machine Learning Repository.
 ---
 # Project Pipeline
 
-1. Data Loading
+**1. Data Loading**
 
 The dataset comes split into two files: one for training and one for testing.
 Before any processing can begin, both parts must be loaded and structured consistently. Pandas ensures proper parsing of large numerical datasets and provides powerful tools for merging and inspecting data.
@@ -62,7 +62,7 @@ Before any processing can begin, both parts must be loaded and structured consis
 - Combine or inspect datasets as needed
 - Separate features (X) and labels (y)
 
-2. Exploratory Data Analysis
+**2. Exploratory Data Analysis**
 
 This part is essential to understand potential data quality issues.
 The Shuttle dataset is extremely imbalanced, with class 1 dominating the dataset.
