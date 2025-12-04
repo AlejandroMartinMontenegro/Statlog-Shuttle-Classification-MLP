@@ -70,11 +70,67 @@ Identifying these characteristics early allows us to design the correct preproce
 Visual exploration also reveals whether variables have meaningful variance and whether scaling might be required.
 
 - Study class distribution (high imbalance detected)
-
 - Detect duplicate rows
-
 - Ensure correct data types
-
 - Inspect variable ranges and statistics
-
 - Plot histograms and boxplots for all features
+
+**3. Preprocessing**
+
+- Remove extremely rare classes
+
+- Manually balance classes 1, 4, and 5
+
+- Normalize all variables using Z-score scaling
+
+- Encode labels using LabelEncoder
+
+Removing rare classes helps avoid unstable training caused by classes with negligible representation.
+Manual balancing ensures that each remaining class contributes equally during training; otherwise, the neural network would be biased toward the dominant class.
+Z-score normalization ensures all variables are centered and scaled, which is critical for neural networks to avoid gradient explosion or vanishing.
+Label encoding converts categorical class labels into integers, which MLPClassifier expects.
+
+**4. Train/Test**
+
+- Use Stratified 5-Fold Cross-Validation
+
+- Maintain class proportions across folds
+
+- Evaluate model stability and generalization
+
+With an originally imbalanced dataset, it is extremely important to ensure that each fold of cross-validation reflects the true class distribution.
+Using StratifiedKFold guarantees this balance and prevents misleading validation results.
+Cross-validation also measures how consistently the model performs across multiple splits.
+
+**Model Training - MLPClassifier**
+
+- Neural network model with hidden layers
+
+- ReLU activation function
+
+- Adam optimizer
+
+- Early stopping enabled
+
+- Train on the balanced dataset
+
+- Monitor convergence and loss curve
+
+The Multilayer Perceptron is a powerful non-linear classifier.
+The combination of ReLU activation and the Adam optimizer allows the model to converge quickly and handle complex input spaces.
+Training on the manually balanced dataset ensures the model learns each class equally.
+Early stopping prevents overfitting by halting training when improvements stall.
+
+
+**Model Evaluation**
+- Generate accuracy, precision, recall, and F1-score
+
+- Build a confusion matrix
+
+- Analyze mistakes class-by-class
+
+- Verify stability across folds
+
+Evaluation verifies not only how well the model performs, but also how the performance is distributed across classes.
+Because this is a multiclass problem, metrics such as precision, recall, and F1-score become essential—not only overall accuracy.
+The confusion matrix is the most informative tool: if it is nearly diagonal, the model is performing very well.
