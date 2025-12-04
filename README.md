@@ -158,31 +158,33 @@ The model achieves near-perfect performance, with accuracy, precision, recall, a
 ---
 # Repository Structure
 
-Statlog-Shuttle-Classification-MLP/
-│
-├── ProyectoFinal1.ipynb                     # Main Jupyter Notebook containing the full workflow
-├── Proyecto Final.docx                      # Written project report
-│
-├── shuttle.trn                              # Original training file
-├── shuttle.tst                              # Original test file
-├── shuttle.trn.Z                            # Compressed version of the training file
-│
-├── shuttle_train_balanceado_manual.csv       # Manually balanced dataset (classes 1, 4, 5)
-├── shuttle_train_preprocesado_balanceado.csv # Final preprocessed + balanced dataset
-│
-└── README.md                                 # Project documentation
+| File                                        | Description                                                                                      |
+| ------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| `ProyectoFinal1.ipynb`                      | Main Jupyter Notebook containing the full workflow (EDA, preprocessing, balancing, MLP training) |
+| `Proyecto Final.docx`                       | Written project report                                                                           |
+| `shuttle.trn`                               | Original training dataset from Statlog Shuttle                                                   |
+| `shuttle.tst`                               | Original test dataset from Statlog Shuttle                                                       |
+| `shuttle.trn.Z`                             | Compressed version of the training dataset                                                       |
+| `shuttle_train_balanceado_manual.csv`       | Manually balanced dataset (classes 1, 4, 5)                                                      |
+| `shuttle_train_preprocesado_balanceado.csv` | Final preprocessed + balanced dataset                                                            |
+| `Index`                                     | Dataset metadata and technical description                                                       |
+| `shuttle.doc`                               | Official dataset documentation                                                                   |
+| `README.md`                                 | Project documentation                                                                            |
 
 ---
 # How to run the project
 
 **1. Clone repository**
+
 git clone https://github.com/<your-username>/Statlog-Shuttle-Classification-MLP.git
 cd Statlog-Shuttle-Classification-MLP
 
 **2. Install required libraries**
+
 pip install pandas numpy matplotlib seaborn scikit-learn jupyter
 
 **3. Launch Jupyter Notebook**
+
 jupyter notebook
 
 
