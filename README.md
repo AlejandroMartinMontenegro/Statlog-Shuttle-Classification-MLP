@@ -134,3 +134,57 @@ Early stopping prevents overfitting by halting training when improvements stall.
 Evaluation verifies not only how well the model performs, but also how the performance is distributed across classes.
 Because this is a multiclass problem, metrics such as precision, recall, and F1-score become essential—not only overall accuracy.
 The confusion matrix is the most informative tool: if it is nearly diagonal, the model is performing very well.
+
+**Results**
+
+
+Performance Metrics
+| Metric        | Class 1 | Class 4 | Class 5 | Macro Average | Overall    |
+| ------------- | ------- | ------- | ------- | ------------- | ---------- |
+| **Accuracy**  | –       | –       | –       | –             | **99.99%** |
+| **Precision** | 99.99%  | 99.98%  | 99.99%  | **99.99%**    | –          |
+| **Recall**    | 100%    | 99.98%  | 99.98%  | **99.99%**    | –          |
+| **F1-Score**  | 100%    | 99.98%  | 99.98%  | **99.99%**    | –          |
+
+Confusion Matrix
+| Actual \ Predicted | Class 1  | Class 4  | Class 5  |
+| ------------------ | -------- | -------- | -------- |
+| **Class 1**        | **2458** | 1        | 0        |
+| **Class 4**        | 0        | **2457** | 1        |
+| **Class 5**        | 0        | 1        | **2457** |
+
+The model achieves near-perfect performance, with accuracy, precision, recall, and F1-score all exceeding 99.9%. The confusion matrix shows minimal misclassification, indicating that the Shuttle dataset becomes highly separable once properly balanced and normalized. The combination of manual resampling, ANOVA feature selection, and MLP training produces a stable and extremely effective classifier.
+
+---
+# Repository Structure
+
+Statlog-Shuttle-Classification-MLP/
+│
+├── ProyectoFinal1.ipynb                     # Main Jupyter Notebook containing the full workflow
+├── Proyecto Final.docx                      # Written project report
+│
+├── shuttle.trn                              # Original training file
+├── shuttle.tst                              # Original test file
+├── shuttle.trn.Z                            # Compressed version of the training file
+│
+├── shuttle_train_balanceado_manual.csv       # Manually balanced dataset (classes 1, 4, 5)
+├── shuttle_train_preprocesado_balanceado.csv # Final preprocessed + balanced dataset
+│
+└── README.md                                 # Project documentation
+
+---
+# How to run the project
+
+**1. Clone repository**
+git clone https://github.com/<your-username>/Statlog-Shuttle-Classification-MLP.git
+cd Statlog-Shuttle-Classification-MLP
+
+**2. Install required libraries**
+pip install pandas numpy matplotlib seaborn scikit-learn jupyter
+
+**3. Launch Jupyter Notebook**
+jupyter notebook
+
+
+
+
