@@ -13,14 +13,21 @@ Classification project using the Statlog (Shuttle) dataset.  Includes preprocess
 This project addresses the classification of the Shuttle Control System into 7 different classes, using a neural network model.
 The workflow includes:
 
-Data exploration and preprocessing
+- Data exploration and preprocessing
 
-Balancing strategies for highly imbalanced classes
+- Balancing strategies for highly imbalanced classes
 
-Feature selection
+- Feature selection
 
-MLP model training
+- MLP model training
 
-Cross-validation
+- Cross-validation
 
-Performance evaluation and interpretation
+- Performance evaluation and interpretation
+
+---
+
+# Dataset Description
+
+The Statlog (Shuttle) dataset consists of: 9 numerical input variables, a single target variable with 7 output classes, a total of 58,000+ records and a strong class imbalance (Class 1 represents ~80% of the dataset)
+The dataset is available from the UCI Machine Learning Repository.
